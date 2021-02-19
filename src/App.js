@@ -4,7 +4,7 @@ import { useRealtimeDrawer, useRealtimeViewer } from 'react-realtime-drawing';
 
 const NumberAnimate = () => {
 
-  const [viewerRef, { onChange }] = useRealtimeViewer();
+  const [, { onChange }] = useRealtimeViewer();
 
   const [drawerRef] = useRealtimeDrawer({
     color: '#00ffaa',
