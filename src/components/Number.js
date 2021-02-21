@@ -6,7 +6,7 @@ const Number = ({number}) => {
     <SvgLines animate={ true } duration={ 5000 }>
     <svg 
         style={{border:"solid", borderWidth:"3px", borderColor:"purple"}}
-        viewBox="390 50 400 500"
+        viewBox="500 50 400 500"
         height="500"
         width="500"
         >

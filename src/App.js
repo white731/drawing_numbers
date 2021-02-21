@@ -1,6 +1,6 @@
 import { useRealtimeDrawer, useRealtimeViewer } from 'react-realtime-drawing';
 import Number from './components/Number';
-import { Six } from './svgs/Numbers';
+import { Five } from './svgs/Numbers';
 import NumberNavBar from './components/NumberNavBar';
 import styled from 'styled-components';
 
@@ -18,11 +18,11 @@ return (
 <NumberNavBar/>
 
   <SVGBox>
-      <Number number = {Six}/>
+      <Number number = {Five}/>
   </SVGBox>
 
   <DrawBox>
-    <canvas ref={drawerRef} style={{border:"solid", borderWidth:"3px", borderColor:"red", height:"95%", weight: "95%"}}/>
+    <canvas ref={drawerRef} style={{border:"solid", borderWidth:"3px", borderColor:"red"}}/>
   </DrawBox>
 
   
