@@ -41,9 +41,9 @@ export default App
 
 
 const SVGBox = styled.div`
-border:solid;
-border-width: 3px;
-border-color:blue;
+// border:solid;
+// border-width: 3px;
+// border-color:blue;
 width: 500px;
 height: 500px;
 margin: auto;
