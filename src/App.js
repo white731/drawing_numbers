@@ -2,8 +2,11 @@ import { useRealtimeDrawer, useRealtimeViewer} from 'react-realtime-drawing';
 import Number from './components/Number';
 import NumberNavBar from './components/NumberNavBar';
 import styled from 'styled-components';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Five } from './svgs/Numbers';
+import {BiReset} from 'react-icons/bi'
+import {AiFillPlaySquare} from 'react-icons/ai'
+import {HiPencil} from 'react-icons/hi'
 
 const App = () => {
 
@@ -28,12 +31,12 @@ const App = () => {
   }
 
   const playAgain = () => {
-    setAnimate(animate == "hello" ? true : "hello")
+    setAnimate(animate === "hello" ? true : "hello")
   }
 
   const switchNum = (numberComp) => {
     setNumber(numberComp)
-    setAnimate(animate == "hello" ? true : "hello")
+    setAnimate(animate === "hello" ? true : "hello")
     handleReset()
     // console.log(numberComp)
     
@@ -43,13 +46,13 @@ const App = () => {
     setNumber("")
   }
 
-  const copyPath = () => {
-    let canvas = document.getElementById("myCanvas")
-    let ctx = canvas.getContext('2d');
-    let path1 = new Path2D();
-    let p = path1.addPath(ctx)
-    console.log(p)
-  }
+  // const copyPath = () => {
+  //   let canvas = document.getElementById("myCanvas")
+  //   let ctx = canvas.getContext('2d');
+  //   let path1 = new Path2D();
+  //   let p = path1.addPath(ctx)
+  //   console.log(p)
+  // }
 
 
   const renderSwitchNum = () => {
@@ -75,9 +78,9 @@ return (
   
   <div style = {{display:"flex", flexDirection:"row", flexWrap:"wrap-reverse", justifyContent:"space-around"}}>
     <div style ={{marginTop: 20}}>
-      <Button1 onClick = {handleReset}>Reset Drawing</Button1>
-      <Button2 onClick = {playAgain}>Play again</Button2>
-      <Button2 onClick = {freeDraw}>Free Draw</Button2>
+      <Button2 onClick = {playAgain}><AiFillPlaySquare size="60px"/></Button2>
+      <Button1 onClick = {handleReset}><BiReset size="60px"/></Button1>
+      <Button2 onClick = {freeDraw}><HiPencil size="60px" /></Button2>
     </div>
     
     <div style={{display:"grid", gridColumnStart:"1fr", gridRowStart:"1fr"}}>
@@ -119,7 +122,7 @@ margin-top: 20px;
 justify-content:center;
 align-self:center;
 display:flex;
-padding-top: 75px;
+padding-top: 60px;
 font-size: 24px;
 border-radius: 15px;
 `

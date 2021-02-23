@@ -1,5 +1,4 @@
 import SvgLines from 'react-mt-svg-lines';
-import { useState } from 'react';
 
 const Number = ({number, animate}) => {
 
