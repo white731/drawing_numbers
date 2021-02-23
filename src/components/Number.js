@@ -1,9 +1,11 @@
 import SvgLines from 'react-mt-svg-lines';
+import { useState } from 'react';
 
-const Number = ({number}) => {
+const Number = ({number, animate}) => {
+
 
   return (
-    <SvgLines animate={ true } duration={ 5000 }>
+    <SvgLines animate={ animate } duration={ 5000 }>
     <svg 
         
         viewBox="500 50 400 500"
